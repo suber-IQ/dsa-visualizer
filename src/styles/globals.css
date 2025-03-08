@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Optional: Smooth transition for background color changes */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Ensure smooth transition
+html {
+  transition: background-color 0.3s, color 0.3s;
+} */
+
+/* Backdrop for Sidebar */
+.sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
