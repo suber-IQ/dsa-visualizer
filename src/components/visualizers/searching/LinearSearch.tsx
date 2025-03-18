@@ -40,7 +40,7 @@ const LinearSearch = () => {
         {array.map((num, index) => (
           <div
             key={index}
-            className={`p-3 text-center border rounded ${
+            className={`p-3 text-center border rounded dark:text-gray-800 ${
               currentIndex === index ? "bg-green-400 text-white" : "bg-gray-200"
             }`}
           >

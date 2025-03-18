@@ -42,7 +42,7 @@ const SelectionSort = () => {
                 style={{ height: `${value * 4}px` }}
               ></div>
               {/* Show the value of the bar beneath it */}
-              <span className="text-pink-800 text-sm mt-1">{value}</span>
+              <span className="text-pink-800 dark:text-yellow-500 text-sm mt-1">{value}</span>
             </div>
           ))}
         </div>

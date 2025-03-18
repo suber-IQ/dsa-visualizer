@@ -15,6 +15,7 @@ interface SortingState {
   sorting: boolean;
   isSortingAlgorithm1: boolean; 
   isSortingAlgorithm2: boolean;
+
 }
 
 const generateRandomArray = (arraySize: number): number[] =>
@@ -32,6 +33,7 @@ const initialState: SortingState = {
   sorting: false,
   isSortingAlgorithm1: false,
   isSortingAlgorithm2: false,
+ 
 };
 
 const sortingSlice = createSlice({
@@ -71,6 +73,7 @@ const sortingSlice = createSlice({
     setBarPositions: (state, action: PayloadAction<{ x: number; y: number }[]>) => {
       state.barPositions = action.payload;
     },
+   
   },
 });
 
@@ -83,6 +86,7 @@ export const {
   setSortingAlgorithm2,
   setBarColors,
   setBarPositions,
+
 } = sortingSlice.actions;
 
 export default sortingSlice.reducer;

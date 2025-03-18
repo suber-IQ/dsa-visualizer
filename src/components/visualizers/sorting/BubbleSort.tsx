@@ -35,7 +35,7 @@ const BubbleSort = () => {
                 className={`w-6 transition-all duration-300 ${barColors[index]}`}
                 style={{ height: `${value * 4}px` }}
               ></div>
-              <span className="text-pink-800 text-sm mt-1">{value}</span> {/* Shows number below bars */}
+              <span className="text-pink-800 dark:text-yellow-500 text-sm mt-1">{value}</span> {/* Shows number below bars */}
             </div>
           ))}
         </div>

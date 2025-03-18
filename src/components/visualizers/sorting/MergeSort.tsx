@@ -41,7 +41,7 @@ const MergeSort = () => {
                   transform: `translate(${barPositions[index].x}px, ${barPositions[index].y}px)`,
                 }}
               >
-                <span className="text-sm">{value}</span> {/* Number on the bar */}
+                <span className="text-sm ">{value}</span> {/* Number on the bar */}
               </div>
             </div>
           ))}

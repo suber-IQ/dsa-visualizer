@@ -38,7 +38,7 @@ const InsertionSort = () => {
                 className={`w-6 transition-all duration-500 ease-in-out ${barColors[index]}`}
                 style={{ height: `${value * 4}px` }}
               ></div>
-              <span className="text-gray-800 text-sm mt-1">{value}</span>
+              <span className="text-gray-800 text-sm dark:text-yellow-500 mt-1">{value}</span>
             </div>
           ))}
         </div>

@@ -7,7 +7,7 @@ interface ThemeState {
 // Get stored theme from localStorage
 const storedTheme = localStorage.getItem("theme");
 const initialState: ThemeState = {
-  darkMode: storedTheme ? storedTheme === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches,
+  darkMode: storedTheme ? storedTheme === "dark" : false,
 };
 
 // Apply dark mode on first load

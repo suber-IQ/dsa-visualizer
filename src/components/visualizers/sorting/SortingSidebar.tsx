@@ -43,6 +43,12 @@ const SortingSidebar = () => {
     }
   };
 
+  const handleResetArray = () => {
+    const newArray = Array.from({ length: arraySize }, () => Math.floor(Math.random() * 50));
+    dispatch(updateArray(newArray));
+    setInputArray(newArray.join(",")); // Update input field with new array
+  };
+
   const handleSpeedChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(updateSpeed(Number(e.target.value)));
   };
@@ -51,6 +57,7 @@ const SortingSidebar = () => {
     const newSize = Number(e.target.value);
     const newArray = Array.from({ length: newSize }, () => Math.floor(Math.random() * 50));
     dispatch(updateArray(newArray));
+    setInputArray(newArray.join(","));
   };
 
   const handleAlgorithmChange = (
@@ -78,7 +85,7 @@ const SortingSidebar = () => {
         }`}
       >
         <h2 className="text-xl font-semibold mb-4">Sorting Controls</h2>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 mb-2">
           <CustomInput
             label="Enter Array (comma-separated):"
             value={inputArray}
@@ -89,6 +96,12 @@ const SortingSidebar = () => {
             onClick={handleApplyArray}
             color="blue"
             disabled={sorting}
+          />
+          <CustomButton
+            label="Reset Array"
+            onClick={handleResetArray}
+            color="red"
+            disabled={sorting} // Disable while sorting is active
           />
         </div>
 
